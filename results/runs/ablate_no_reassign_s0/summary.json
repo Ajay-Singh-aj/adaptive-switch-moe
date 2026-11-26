@@ -1,0 +1,60 @@
+{
+  "run_name": "ablate_no_reassign_s0",
+  "seed": 0,
+  "params": 2408960,
+  "config": {
+    "vocab_size": 65,
+    "block_size": 128,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_ff": 512,
+    "n_layers": 4,
+    "n_experts": 4,
+    "dropout": 0.1,
+    "capacity_factor": 1.0,
+    "moe": "adaptive",
+    "load_balance_coef": 0.01,
+    "simbal_coef": 0.001,
+    "adaptive_k": 0.2,
+    "importance_priority": true,
+    "reassign": false
+  },
+  "steps": 5000,
+  "batch_size": 64,
+  "lr": 0.001,
+  "final": {
+    "step": 5000,
+    "train_loss": 1.3776989336013794,
+    "train_drop_rate": 0.0118232421875,
+    "train_reassign_rate": 0.0,
+    "val_loss": 1.5186838984489441,
+    "val_drop_rate": 0.0145867919921875,
+    "elapsed_s": 266.3
+  },
+  "expert_counts_last_batch": [
+    [
+      2027,
+      2024,
+      2097,
+      2044
+    ],
+    [
+      2165,
+      1990,
+      2025,
+      2012
+    ],
+    [
+      2116,
+      2074,
+      2067,
+      1935
+    ],
+    [
+      2123,
+      2055,
+      2078,
+      1936
+    ]
+  ]
+}

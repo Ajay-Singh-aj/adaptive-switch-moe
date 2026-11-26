@@ -1,0 +1,60 @@
+{
+  "run_name": "adaptive_cf1.0_s2",
+  "seed": 2,
+  "params": 2408960,
+  "config": {
+    "vocab_size": 65,
+    "block_size": 128,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_ff": 512,
+    "n_layers": 4,
+    "n_experts": 4,
+    "dropout": 0.1,
+    "capacity_factor": 1.0,
+    "moe": "adaptive",
+    "load_balance_coef": 0.01,
+    "simbal_coef": 0.001,
+    "adaptive_k": 0.2,
+    "importance_priority": true,
+    "reassign": true
+  },
+  "steps": 5000,
+  "batch_size": 64,
+  "lr": 0.001,
+  "final": {
+    "step": 5000,
+    "train_loss": 1.385115909576416,
+    "train_drop_rate": 0.0,
+    "train_reassign_rate": 0.024955810546875,
+    "val_loss": 1.525227952003479,
+    "val_drop_rate": 0.0,
+    "elapsed_s": 346.4
+  },
+  "expert_counts_last_batch": [
+    [
+      2048,
+      1980,
+      2055,
+      2109
+    ],
+    [
+      2061,
+      2048,
+      2027,
+      2056
+    ],
+    [
+      2048,
+      2118,
+      1978,
+      2048
+    ],
+    [
+      2058,
+      2048,
+      2102,
+      1984
+    ]
+  ]
+}

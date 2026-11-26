@@ -1,0 +1,60 @@
+{
+  "run_name": "ablate_no_importance_s1",
+  "seed": 1,
+  "params": 2408960,
+  "config": {
+    "vocab_size": 65,
+    "block_size": 128,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_ff": 512,
+    "n_layers": 4,
+    "n_experts": 4,
+    "dropout": 0.1,
+    "capacity_factor": 1.0,
+    "moe": "adaptive",
+    "load_balance_coef": 0.01,
+    "simbal_coef": 0.001,
+    "adaptive_k": 0.2,
+    "importance_priority": false,
+    "reassign": true
+  },
+  "steps": 5000,
+  "batch_size": 64,
+  "lr": 0.001,
+  "final": {
+    "step": 5000,
+    "train_loss": 1.3969939737319945,
+    "train_drop_rate": 0.0,
+    "train_reassign_rate": 0.0295697021484375,
+    "val_loss": 1.547305736541748,
+    "val_drop_rate": 0.0,
+    "elapsed_s": 337.0
+  },
+  "expert_counts_last_batch": [
+    [
+      2041,
+      2060,
+      2034,
+      2057
+    ],
+    [
+      2118,
+      2066,
+      1960,
+      2048
+    ],
+    [
+      2059,
+      2102,
+      1969,
+      2062
+    ],
+    [
+      2010,
+      2068,
+      2066,
+      2048
+    ]
+  ]
+}

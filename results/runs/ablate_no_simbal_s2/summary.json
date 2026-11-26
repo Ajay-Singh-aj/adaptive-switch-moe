@@ -1,0 +1,60 @@
+{
+  "run_name": "ablate_no_simbal_s2",
+  "seed": 2,
+  "params": 2408960,
+  "config": {
+    "vocab_size": 65,
+    "block_size": 128,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_ff": 512,
+    "n_layers": 4,
+    "n_experts": 4,
+    "dropout": 0.1,
+    "capacity_factor": 1.0,
+    "moe": "adaptive",
+    "load_balance_coef": 0.01,
+    "simbal_coef": 0.0,
+    "adaptive_k": 0.2,
+    "importance_priority": true,
+    "reassign": true
+  },
+  "steps": 5000,
+  "batch_size": 64,
+  "lr": 0.001,
+  "final": {
+    "step": 5000,
+    "train_loss": 1.3876943540573121,
+    "train_drop_rate": 0.0,
+    "train_reassign_rate": 0.0289361572265625,
+    "val_loss": 1.5284972238540648,
+    "val_drop_rate": 0.0,
+    "elapsed_s": 240.0
+  },
+  "expert_counts_last_batch": [
+    [
+      2048,
+      1945,
+      2082,
+      2117
+    ],
+    [
+      2029,
+      2016,
+      2099,
+      2048
+    ],
+    [
+      2048,
+      2103,
+      1993,
+      2048
+    ],
+    [
+      2059,
+      2048,
+      2124,
+      1961
+    ]
+  ]
+}

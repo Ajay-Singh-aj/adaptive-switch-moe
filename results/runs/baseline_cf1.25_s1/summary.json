@@ -1,0 +1,60 @@
+{
+  "run_name": "baseline_cf1.25_s1",
+  "seed": 1,
+  "params": 2408960,
+  "config": {
+    "vocab_size": 65,
+    "block_size": 128,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_ff": 512,
+    "n_layers": 4,
+    "n_experts": 4,
+    "dropout": 0.1,
+    "capacity_factor": 1.25,
+    "moe": "baseline",
+    "load_balance_coef": 0.01,
+    "simbal_coef": 0.001,
+    "adaptive_k": 0.2,
+    "importance_priority": true,
+    "reassign": true
+  },
+  "steps": 5000,
+  "batch_size": 64,
+  "lr": 0.001,
+  "final": {
+    "step": 5000,
+    "train_loss": 1.3863383173942565,
+    "train_drop_rate": 0.0,
+    "train_reassign_rate": 0.0,
+    "val_loss": 1.5331309342384338,
+    "val_drop_rate": 0.0,
+    "elapsed_s": 213.4
+  },
+  "expert_counts_last_batch": [
+    [
+      2153,
+      1765,
+      2136,
+      2138
+    ],
+    [
+      2126,
+      2069,
+      1856,
+      2141
+    ],
+    [
+      2106,
+      2218,
+      1880,
+      1988
+    ],
+    [
+      2128,
+      2107,
+      1797,
+      2160
+    ]
+  ]
+}
